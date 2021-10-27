@@ -1,39 +1,46 @@
 {
-    "env": {
-       "es6": true,
-       "browser": true,
-       "node": true
+  "env": {
+     "es6": true,
+     "browser": true,
+     "node": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "configFile": "./.babelrc"
     },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true
-      }
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-      "indent": [
-        "error",
-        2,
-        {"SwitchCase": 1}
-      ],
-      "linebreak-style": [
-        "off"
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {"allowTemplateLiterals": true}
-      ],
-      "semi": [
-        "error",
-        "always"
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "no-console": "off"
+    "ecmaVersion": "2018",
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
     }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {"SwitchCase": 1}
+    ],
+    "linebreak-style": [
+      "off"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {"allowTemplateLiterals": true}
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "no-console": "off"
   }
+}
