@@ -55,7 +55,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={addCard}/>
         </div>
       </section>
-    )
+    );
   }
 }
 

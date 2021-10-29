@@ -22,7 +22,7 @@ class App extends React.Component {
           <List key={listData.id} {...listData} />
         ))}
       </main>
-    )
+    );
   }
 }
 
