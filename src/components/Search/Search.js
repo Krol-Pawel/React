@@ -4,7 +4,6 @@ import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon';
-import Container from '../Container/Container';
 import {withRouter} from 'react-router-dom';
 
 
@@ -46,7 +45,7 @@ class Search extends React.Component {
   // }
 
   render() {
-    const {text, countVisible, countAll} = this.props;
+    const {text} = this.props;
     const {value} = this.state;
     const {icon} = settings.search;
     return (

@@ -8,28 +8,27 @@ import Search from '../Search/Search';
 
 
 class Header extends React.Component { 
-    render() {
-      return (
-        <header className={styles.component}>\
-          <Container>
-            <div className={styles.wrapper}>
-              <Link to='/' className={styles.logo}>
-                <Icon name={settings.logo}>
-                  <i class="fad fa-horse-saddle"></i>
-                </Icon>
-              </Link>
-              <Search />
-              <nav>
-                <NavLink exact to='/' activeClassName='active'>Home</NavLink>
-                <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
-                <NavLink exact to='/faq' activeClassName='active'>FAQ</NavLink>
-              </nav>
-            </div>
-          </Container>
-        </header>
-      );
-    }
+  render() {
+    return (
+      <header className={styles.component}>\
+        <Container>
+          <div className={styles.wrapper}>
+            <Link to='/' className={styles.logo}>
+              <Icon name={settings.logo}>
+              </Icon>
+            </Link>
+            <Search />
+            <nav>
+              <NavLink exact to='/' activeClassName='active'>Home</NavLink>
+              <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
+              <NavLink exact to='/faq' activeClassName='active'>FAQ</NavLink>
+            </nav>
+          </div>
+        </Container>
+      </header>
+    );
   }
-  
-  export default Header;
+}
+
+export default Header;
   
