@@ -10,7 +10,7 @@ import Search from '../Search/Search';
 class Header extends React.Component { 
   render() {
     return (
-      <header className={styles.component}>\
+      <header className={styles.component}>
         <Container>
           <div className={styles.wrapper}>
             <Link to='/' className={styles.logo}>
