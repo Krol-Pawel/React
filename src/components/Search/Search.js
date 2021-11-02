@@ -15,6 +15,7 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
+    history: PropTypes.object,
   }
 
   static defaultProps = {
@@ -22,7 +23,8 @@ class Search extends React.Component {
   }
 
   state = {
-    value: this.props.searchString,
+    value: '',
+    visibleButtons: false,
   }
 
   handleChange(event){
@@ -37,33 +39,31 @@ class Search extends React.Component {
     this.props.history.push(`/search/${this.state.value}`);
   }
 
-  componentDidUpdate(prevProps){
-    if(this.props.searchString != prevProps.searchString){
-      this.setState({value: this.props.searchString});
-    }
-  }
+  // componentDidUpdate(prevProps){
+  //   if(this.props.searchString != prevProps.searchString){
+  //     this.setState({value: this.props.searchString});
+  //   }
+  // }
 
   render() {
     const {text, countVisible, countAll} = this.props;
     const {value} = this.state;
     const {icon} = settings.search;
     return (
-      <Container>
-        <div className={styles.component}>
-          <input
-            type='text'
-            placeholder={text}
-            value={value}
-            onChange={event => this.handleChange(event)}
-          />
-          <div className={styles.buttons}>
-            <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
-          </div>
-          <div>
-            { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
-          </div>
+      <div className={styles.component}>
+        <input
+          type='text'
+          placeholder={text}
+          value={value}
+          onChange={event => this.handleChange(event)}
+        />
+        <div className={styles.buttons}>
+          <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
         </div>
-      </Container>
+        {/* <div>
+          { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
+        </div> */}
+      </div>
     );
   }
 }
