@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 import styles from './Header.scss';
 import Icon from '../Icon/Icon.js';
 import { settings } from '../../data/dataStore';
-
+import Search from '../Search/Search';
 
 
 class Header extends React.Component { 
@@ -18,6 +18,7 @@ class Header extends React.Component {
                   <i class="fad fa-horse-saddle"></i>
                 </Icon>
               </Link>
+              <Search />
               <nav>
                 <NavLink exact to='/' activeClassName='active'>Home</NavLink>
                 <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
